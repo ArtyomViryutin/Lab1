@@ -37,13 +37,13 @@ int main() {
 		break;
 	case 2:
 		char *String; // Строка для ввода
-		Histogram NewBarChart;
+		Histogram NewBarChart; // Структура для гистограммы частоты встречающихся строчных букв
 		InitHistogram(NewBarChart);
 		Sep();
 		std::cout << "Введите строку:" << std::endl;
-		String = InputString();
-		Frequency(NewBarChart, String);
-		CreateHistogram(myBarChart, String);
+		String = InputString(); // Ввод строки
+		Frequency(NewBarChart, String); // Заполнение гистограммы
+		CreateHistogram(myBarChart, String); // Создание гистограммы частоты встречающихся слов в строке
 		Sep();
 		std::cout << "Гистограмма частоты строчных букв:" << std::endl;
 		if (NewBarChart.nMaxBar == 0) // Условие на случай, если в строке все различные слова встречаются один раз
